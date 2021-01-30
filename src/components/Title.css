@@ -1,0 +1,9 @@
+.title {
+    color: #00303f;
+    text-align: center;
+    width: 100%;
+}
+.title span{
+    color: #9b9b9b;
+    margin-right: .7rem;
+}

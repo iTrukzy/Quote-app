@@ -1,0 +1,6 @@
+.autor {
+    display: flex;
+    justify-content: flex-end;
+    color: #c0c0c0;
+    margin-top: 1rem;
+}

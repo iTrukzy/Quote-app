@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { useState }from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+import QuoteBox from './components/QuoteBox.jsx'
+
+
+const App = () => {
+    const [isHex, setIsHex] = useState("#86b3c2") // Estado para modificar el BackGound del body
+    const [isButtonHex, setIsButtonHex] = useState("#86b3c2") // Estado para modificar el BackGound de los botones
+
+    const handleHex = () => { // Function que contiene el generador de color
+      const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16) // Metodo para generar color random
+      setIsHex(randomColor); // Funcion del estado que modifica el BackGound del body
+      setIsButtonHex(randomColor); // Funcion del estado que modifica el BackGound de los botones
+    }
+
+    return (
+      <div className="app" style={{backgroundColor: isHex, transition: "all .3s ease"}}>
+        <QuoteBox color={handleHex} button={isButtonHex}/> 
+        {/* Props del componente QuoteBox */}
+      </div>
+    );
+}
 export default App;

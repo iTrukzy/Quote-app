@@ -1,0 +1,12 @@
+.QuoteBox {
+    position: relative;
+    background-color: #f8f8f8;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+}
+.QuoteBox span{
+    width: 100%;
+    
+}
