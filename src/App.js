@@ -6,18 +6,18 @@ import QuoteBox from './components/QuoteBox.jsx'
 
 
 const App = () => {
-    const [isHex, setIsHex] = useState("#86b3c2") // Estado para modificar el BackGound del body
+    const [isColor, setIsColor] = useState("#86b3c2") // Estado para modificar el BackGound del body
     const [isButtonHex, setIsButtonHex] = useState("#86b3c2") // Estado para modificar el BackGound de los botones
 
-    const handleHex = () => { // Function que contiene el generador de color
+    const handleColor = () => { // Function que contiene el generador de color
       const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16) // Metodo para generar color random
-      setIsHex(randomColor); // Funcion del estado que modifica el BackGound del body
+      setIsColor(randomColor); // Funcion del estado que modifica el BackGound del body
       setIsButtonHex(randomColor); // Funcion del estado que modifica el BackGound de los botones
     }
 
     return (
-      <div className="app" style={{backgroundColor: isHex, transition: "all .3s ease"}}>
-        <QuoteBox color={handleHex} button={isButtonHex}/> 
+      <div className="app" style={{backgroundColor: isColor, transition: "all .3s ease"}}>
+        <QuoteBox color={handleColor} button={isButtonHex}/> 
         {/* Props del componente QuoteBox */}
       </div>
     );
